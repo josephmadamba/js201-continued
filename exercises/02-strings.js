@@ -8,6 +8,10 @@
 // Example:
 // reverse("skoob") --> "books"
 
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+reverseString("");
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,7 +21,20 @@
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
-
+function findLongestWord(string) {
+    var str = string.split(" ");
+    var longest = 0;
+    var word = null;
+    for (var i = 0; i < str.length; i++) {
+      if (longest < str[i].length) {
+        longest = str[i].length;
+        word = str[i];
+      }
+    }
+    return word;
+  }
+  
+  console.log(findLongestWord());
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,6 +45,11 @@
 // Example:
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
+
+function nicer (){
+
+
+}
 
 
 
@@ -40,6 +62,16 @@
 // capitalizeAll('hello world') --> 'Hello World'
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
 
+function capitalizeAll (str){
+   var arr = str.toLowercase().split(" ");
+   var result = arr.map(
+     function(val){
+      return val.replace(val.charAt(0), val.charAt(0).toUppercase());
+     }); 
+       return result.join(" ");
+}
+
+  capitalizeAll();
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,3 +84,8 @@
 // split('a-b-c', '-') --> ['a', 'b', 'c']
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
+
+function split (){
+
+
+}
